@@ -1,3 +1,6 @@
+Modification of [ros-industrial/universal_robot](https://github.com/ros-industrial/universal_robot). 
+Adds Standard URDF-Files as well as geometry files as obj in addition to the collada(.dae)-meshes. Intended for use outside of ros-environments. 
+
 # Universal Robot
 
 [![Build Status](http://build.ros.org/job/Kdev__universal_robot__ubuntu_xenial_amd64/badge/icon)](http://build.ros.org/job/Kdev__universal_robot__ubuntu_xenial_amd64)
@@ -10,6 +13,7 @@
 
 
 __Installation__
+
 
 There are two different ways to install the packages in this repository. The following sections detail installing the packages using the binary distribution and building them from source in a Catkin workspace.
 
