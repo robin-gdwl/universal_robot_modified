@@ -2,7 +2,7 @@
 import bpy
 import os
 
-path = r'D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot\ur_description\meshes\ur10\visual'  # set this path
+path = r'D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot\ur_description\meshes\ur3\visual'  # set this path to th folder containing .dae-meshes
 
 for root, dirs, files in os.walk(path):
     for f in files:
