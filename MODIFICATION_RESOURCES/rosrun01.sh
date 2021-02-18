@@ -1,3 +1,7 @@
+#This is the correct one !!!!!!!!
+# Use it with the provided Dockerfile to convert xacro to URDF
+docker run -v D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot:/xacro ros_ur:latest rosrun xacro xacro --inorder /xacro/ur_description/urdf/ur10_robot.urdf.xacro > D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot\ur_description\urdf\ur10_robot.urdf
+
 rosrun xacro xacro --inorder D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot\ur_description\urdf\ur10_robot.urdf.xacro > model.urdf
 
 
@@ -10,8 +14,6 @@ docker run -v D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\u
 
 docker run -v D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot:/xacro osrf/ros:kinetic-desktop-full rosrun xacro xacro --inorder /xacro/ur_description/urdf/ur10_robot.urdf.xacro > testur10.urdf
 
-#This is the correct one !!!!!!!!
-docker run -v D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot:/xacro ros_ur:latest rosrun xacro xacro --inorder /xacro/ur_description/urdf/ur10_robot.urdf.xacro > D:\Robins_Data\Projects\Assorted_CADscripts\load_urdf_into_rhino\universal_robot\ur_description\urdf\ur10_robot.urdf
 
 
 
