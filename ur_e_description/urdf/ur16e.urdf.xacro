@@ -19,7 +19,7 @@
     </inertial>
   </xacro:macro>
 
-  <xacro:macro name="ur10e_robot" params="prefix joint_limited
+  <xacro:macro name="ur16e_robot" params="prefix joint_limited
     shoulder_pan_lower_limit:=${-pi}    shoulder_pan_upper_limit:=${pi}
     shoulder_lift_lower_limit:=${-pi}    shoulder_lift_upper_limit:=${pi}
     elbow_joint_lower_limit:=${-pi}    elbow_joint_upper_limit:=${pi}
@@ -148,7 +148,7 @@
       <visual>
         <origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
         <geometry>
-          <mesh filename="package://ur_e_description/meshes/ur10e/visual/upperarm.dae"/>
+          <mesh filename="package://ur_e_description/meshes/ur16e/visual/upperarm.dae"/>
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0"/>
@@ -157,7 +157,7 @@
       <collision>
         <origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
         <geometry>
-          <mesh filename="package://ur_e_description/meshes/ur10e/collision/upperarm.stl"/>
+          <mesh filename="package://ur_e_description/meshes/ur16e/collision/upperarm.stl"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="${-1*__kinematics['forearm']['x']}" mass="${upper_arm_mass}">
@@ -189,7 +189,7 @@
       <visual>
         <origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
         <geometry>
-          <mesh filename="package://ur_e_description/meshes/ur10e/visual/forearm.dae"/>
+          <mesh filename="package://ur_e_description/meshes/ur16e/visual/forearm.dae"/>
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0"/>
@@ -198,7 +198,7 @@
       <collision>
         <origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
         <geometry>
-          <mesh filename="package://ur_e_description/meshes/ur10e/collision/forearm.stl"/>
+          <mesh filename="package://ur_e_description/meshes/ur16e/collision/forearm.stl"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="${-1*__kinematics['wrist_1']['x']}" mass="${forearm_mass}">
