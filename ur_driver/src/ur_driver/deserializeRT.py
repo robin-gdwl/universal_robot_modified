@@ -1,4 +1,3 @@
-from __future__ import print_function
 import struct
 import copy
 
@@ -15,7 +14,7 @@ class RobotStateRT(object):
         elif plen == 1044:
             return RobotStateRT_V30.unpack(buf)
         else:
-            print("RobotStateRT has wrong length: " + str(plen))
+            print "RobotStateRT has wrong length: " + str(plen)
             return rs
 
 #this parses RobotStateRT for versions = v1.5
@@ -35,7 +34,7 @@ class RobotStateRT_V15(object):
         message_size = struct.unpack_from("!i", buf, offset)[0]
         offset+=4
         if message_size != len(buf):
-            print(("MessageSize: ", message_size, "; BufferSize: ", len(buf)))
+            print("MessageSize: ", message_size, "; BufferSize: ", len(buf))
             raise Exception("Could not unpack RobotStateRT packet: length field is incorrect")
 
         rs = RobotStateRT_V15()
@@ -146,7 +145,7 @@ class RobotStateRT_V18(object):
         message_size = struct.unpack_from("!i", buf, offset)[0]
         offset+=4
         if message_size != len(buf):
-            print(("MessageSize: ", message_size, "; BufferSize: ", len(buf)))
+            print("MessageSize: ", message_size, "; BufferSize: ", len(buf))
             raise Exception("Could not unpack RobotStateRT packet: length field is incorrect")
 
         rs = RobotStateRT_V18()
@@ -269,7 +268,7 @@ class RobotStateRT_V30(object):
         message_size = struct.unpack_from("!i", buf, offset)[0]
         offset+=4
         if message_size != len(buf):
-            print(("MessageSize: ", message_size, "; BufferSize: ", len(buf)))
+            print("MessageSize: ", message_size, "; BufferSize: ", len(buf))
             raise Exception("Could not unpack RobotStateRT packet: length field is incorrect")
 
         rs = RobotStateRT_V30()
